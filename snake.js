@@ -25,13 +25,13 @@ function determinewinner(userchoice, comchoices) {
   }
 }
 while (true) {
-  const userchoice = prompt("Enter 'S' for snake, 'W' for water, 'G' for gun");
+  const userchoice = prompt("Enter 'S' for snake, 'W' for water, 'G' for gun").toUpperCase();
   if (userchoice === null) {
       alert("Game cancelled");
       break;
   }
-  const one = userchoice.toUpperCase();
-  if (one !== 'S' && one !== 'W' && one !== 'G') {
+  
+  if (userchoice !== 'S' && userchoice !== 'W' && userchoice !== 'G') {
       alert("Invalid input. Please enter S, W, or G.")
      
     continue;
